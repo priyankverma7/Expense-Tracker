@@ -1,5 +1,5 @@
 import React from 'react'
-import UserProvider from './context/userContext';
+import UserProvider from './context/UserContext';
 
 import{
   BrowserRouter as Router,
