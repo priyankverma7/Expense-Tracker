@@ -14,7 +14,7 @@ const useLogout = () => {
     localStorage.removeItem("token");
 
     // Redirect to login
-    navigate("/login");
+    navigate("../pages/Auth/Login.jsx");
   };
 
   return logout;
