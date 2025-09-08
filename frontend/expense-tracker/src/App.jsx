@@ -15,8 +15,6 @@ import { Toaster } from "react-hot-toast";
 import axiosInstance from "./utils/axiosInstances";
 import { API_PATHS } from "./utils/apiPaths";
 
-// 🆕 Import your route guards
-import { PrivateRoute, PublicRoute } from "./routes/ProtectedRoutes";
 
 const App = () => {
   return (
@@ -26,13 +24,13 @@ const App = () => {
           <Route path="/" element={<Root />} />
 
           {/* Public routes */}
-          <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
-          <Route path="/signUp" element={<PublicRoute><SignUp /></PublicRoute>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
 
           {/* Private routes */}
-          <Route path="/dashboard" element={<PrivateRoute><Home /></PrivateRoute>} />
-          <Route path="/income" element={<PrivateRoute><Income /></PrivateRoute>} />
-          <Route path="/expense" element={<PrivateRoute><Expense /></PrivateRoute>} />
+          <Route path="/dashboard" element={<Home />} />
+          <Route path="/income" element={<Income />} />
+          <Route path="/expense" element={<Expense />} />
         </Routes>
       </Router>
 
