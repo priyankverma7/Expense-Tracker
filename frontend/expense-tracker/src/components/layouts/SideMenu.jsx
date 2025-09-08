@@ -3,6 +3,7 @@ import { SIDE_MENU_DATA } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import toast from "react-hot-toast";
+import CharAvatar from "../Cards/CharAvatar";
 
 const SideMenu = ({ activeMenu }) => {
   const { user, clearUser } = useContext(UserContext);
