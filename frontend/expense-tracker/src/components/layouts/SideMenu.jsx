@@ -3,6 +3,7 @@ import { SIDE_MENU_DATA } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import toast from "react-hot-toast";
+import { LuLogOut } from "react-icons/lu"; // ✅ import logout icon
 
 const SideMenu = ({ activeMenu }) => {
   const { user, clearUser } = useContext(UserContext);
@@ -41,8 +42,8 @@ const SideMenu = ({ activeMenu }) => {
         </h5>
       </div>
 
-      {/* Menu Items (Logout filtered out) */}
-      {SIDE_MENU_DATA.filter(item => item.path !== "logout").map((item, index) => (
+      {/* Menu Items */}
+      {SIDE_MENU_DATA.map((item, index) => (
         <button
           key={`menu_${index}`}
           className={`w-full flex items-center gap-4 text-[15px] ${
@@ -62,6 +63,7 @@ const SideMenu = ({ activeMenu }) => {
         className="w-full flex items-center gap-4 text-[15px] text-gray-700 py-3 px-6 rounded-lg hover:bg-primary/10 transition"
         onClick={handleLogout}
       >
+        <LuLogOut className="text-xl" /> {/* ✅ logout icon */}
         Logout
       </button>
     </div>
